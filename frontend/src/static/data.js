@@ -283,6 +283,64 @@ export const productData = [
     stock: 10,
   },
   {
+    id: 3,
+    category: "Fruits",
+    name: "Strawberries",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    image_Url: [
+      {
+        public_id: "test",
+        url: "http://drannwellness.com/wp-content/uploads/2014/03/strawberries1.jpg",
+      },
+      {
+        public_id: "test",
+        url: "http://blogs.kcrw.com/goodfood/wp-content/uploads/2013/07/strawberries.jpg",
+      },
+    ],
+    shop: {
+      name: "Hydroponics Limited",
+      shop_avatar: {
+        public_id: "test",
+        url: "",
+      },
+      ratings: 4.2,
+    },
+    discount_price: 499,
+    rating: 5,
+    total_sell: 80,
+    stock: 10,
+  },
+  {
+    id: 3,
+    category: "Fruits",
+    name: "Avocadoes",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    image_Url: [
+      {
+        public_id: "test",
+        url: "https://diabetesmealplans.com/wp-content/uploads/2017/12/avocado.jpg",
+      },
+      {
+        public_id: "test",
+        url: "http://www.atozpictures.com/uploads/2016/10/avocado-fruit-vegetable-images.jpg",
+      },
+    ],
+    shop: {
+      name: "Hydroponics Limited",
+      shop_avatar: {
+        public_id: "test",
+        url: "",
+      },
+      ratings: 4.2,
+    },
+    discount_price: 499,
+    rating: 5,
+    total_sell: 80,
+    stock: 10,
+  },
+  {
     id: 1,
     category: "Vegetables",
     name: "Cucumbers",

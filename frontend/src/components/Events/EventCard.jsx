@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../../styles/styles";
 // import CountDown from "./CountDown";
+import { IoIosArrowForward } from "react-icons/io";
 
 const EventCard = ({ active, data }) => {
   return (
@@ -41,6 +42,11 @@ const EventCard = ({ active, data }) => {
           <span className="pr-3 font-[400] text-[15px] text-[#2da14c]">
             120 sold
           </span>
+        </div>
+        <div className={`flex ${styles.button} ml-3`}>
+          <h1 className="text-[#fff] flex items-center">
+            Buy Now! <IoIosArrowForward className="ml-1" />
+          </h1>
         </div>
         {/* <CountDown /> */}
         <br />

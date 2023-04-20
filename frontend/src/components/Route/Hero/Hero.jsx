@@ -8,7 +8,7 @@ const Hero = () => {
       className={`relative h-screen w-full bg-no-repeat ${styles.noramlFlex}`}
       style={{
         backgroundImage:
-          "url(https://images.pexels.com/photos/533360/pexels-photo-533360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
+          "url(https://images.pexels.com/photos/2733918/pexels-photo-2733918.jpeg)",
         backgroundSize: "cover",
         // width: "100%",
         // "url(https://themes.rslahmed.dev/rafcart/assets/images/banner-2.jpg)",
@@ -17,11 +17,11 @@ const Hero = () => {
     >
       <div className={`${styles.section} w-[90%] 800px:w-[60%]`}>
         <h1
-          className={`text-[35px] leading-[1.2] 800px:text-[60px] text-[#0d2329] font-[600] capitalize`}
+          className={`text-[45px] leading-[1.2] 800px:text-[110px] text-[#ffffff] font-[600] capitalize`}
         >
           FarmConnect
         </h1>
-        <p className="pt-5 text-[16px] font-[Poppins] font-[400] text-[#000000]">
+        <p className="pt-5 text-[20px] font-[Poppins] font-[700] text-[#ffffff]">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae,
           assumenda? Quisquam itaque <br /> exercitationem labore vel, dolore
           quidem asperiores, laudantium temporibus soluta optio consequatur{" "}
