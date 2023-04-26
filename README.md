@@ -43,6 +43,17 @@ Since this project will hold both the client application and the server applicat
 
 - #### `server.js` - Connects the server to the database
 
+## Architecture
+
+![Techstack](./frontend/src/assets/Add%20item.png)
+
+### Backend
+
+On the server-side, FarmConnect uses Node.js and Express.js to build a robust and scalable server that handles all of the application's business logic. Express.js simplifies the process of building web applications by providing a set of tools and utilities for handling HTTP requests, routing, and middleware. MongoDB was most suitable for this application because of its scalability, flexibility, performance, availability and integration capabilities.Redux is used as a centralized state manager to manage and coordinate data changes across different components.
+
+### Frontend
+
+On the client-side, FarmConnect is built using React, which is a popular front-end JavaScript library that allows for the creation of dynamic user interfaces. React is responsible for rendering the user interface of the application and handling user interactions. It also communicates with the server-side to retrieve data from the database and display it to the user.
 ## Inspiration
 
 FarmConnect was inspired by my passion in agribusiness and technology. Through research, I discovered that Kenyan farmers face several challenges when selling their harvest. Some of these challenges include:
@@ -59,17 +70,6 @@ FarmConnect is a real-world solution that seeks to address the issues affecting 
 - **Exploitative pricing**: FarmConnect eliminates the need for middlemen and brokers by enabling farmers and consumers to interact directly on one platform.
 - **Lack of transparency**: With FarmConnect, farmers are  always informed about the true market value of their produce.
 - **Inefficient supply chains**: FarmConnect provides necessary logistics to transport produce(orders) efficiently to the consumer without compromising on product quality.
-
-## Architecture
-
-![Techstack](./frontend/src/assets/Add%20item.png)
-### Backend
-
-On the server-side, FarmConnect uses Node.js and Express.js to build a robust and scalable server that handles all of the application's business logic. Express.js simplifies the process of building web applications by providing a set of tools and utilities for handling HTTP requests, routing, and middleware. MongoDB was most suitable for this application because of its scalability, flexibility, performance, availability and integration capabilities.Redux is used as a centralized state manager to manage and coordinate data changes across different components.
-
-### Frontend
-
-On the client-side, FarmConnect is built using React, which is a popular front-end JavaScript library that allows for the creation of dynamic user interfaces. React is responsible for rendering the user interface of the application and handling user interactions. It also communicates with the server-side to retrieve data from the database and display it to the user.
 
 ## Screenshots
 
