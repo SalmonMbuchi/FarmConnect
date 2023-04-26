@@ -12,7 +12,7 @@ import CreateShopPage from "../pages/CreateShopPage";
 import CheckoutPage from "../pages/CheckoutPage";
 import SellerActivationPage from "../pages/SellerActivationPage";
 import ShopLoginPage from "../pages/ShopLoginPage";
-// import ShopHomePage from "./ShopRoutes";
+import PaymentPage from "../pages/PaymentPage";
 
 export {
   BestSellingPage,
@@ -29,4 +29,5 @@ export {
   ShopLoginPage,
   ActivationPage,
   ProductsPage,
+  PaymentPage,
 };

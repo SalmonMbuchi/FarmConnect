@@ -62,9 +62,10 @@ FarmConnect is a real-world solution that seeks to address the issues affecting 
 
 ## Architecture
 
+![Techstack](./frontend/src/assets/Add%20item.png)
 ### Backend
 
-On the server-side, FarmConnect uses Node.js and Express.js to build a robust and scalable server that handles all of the application's business logic. Node.js is a JavaScript runtime environment that allows for the execution of JavaScript code on the server-side. Express.js is a popular Node.js framework that simplifies the process of building web applications by providing a set of tools and utilities for handling HTTP requests, routing, and middleware.
+On the server-side, FarmConnect uses Node.js and Express.js to build a robust and scalable server that handles all of the application's business logic. Express.js simplifies the process of building web applications by providing a set of tools and utilities for handling HTTP requests, routing, and middleware. MongoDB was most suitable for this application because of its scalability, flexibility, performance, availability and integration capabilities.Redux is used as a centralized state manager to manage and coordinate data changes across different components.
 
 ### Frontend
 

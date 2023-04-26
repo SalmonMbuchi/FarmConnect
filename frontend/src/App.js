@@ -16,6 +16,7 @@ import {
   SignupPage,
   ActivationPage,
   ProductsPage,
+  PaymentPage,
 } from "./routes/Routes.js";
 import { ToastContainer } from "react-toastify";
 import Store from "./redux/store";
@@ -104,7 +105,16 @@ const App = () => {
             </SellerProtectedRoute>
           }
         />
+        <Route
+          path="/payment"
+          element={
+            <ProtectedRoute>
+              <PaymentPage />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
+
       <ToastContainer
         position="top-center"
         autoClose={5000}

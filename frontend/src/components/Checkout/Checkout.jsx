@@ -87,7 +87,7 @@ const ShippingInfo = () => {
             </select>
           </div>
           <div className="w-[50%]">
-            <label className="block pb-2">Country</label>
+            <label className="block pb-2">City</label>
             <select className="w-[95%] border h-[40px] rounded-[5px]">
               <option className="block pb-2" value="">
                 Choose your City
@@ -104,7 +104,7 @@ const ShippingInfo = () => {
 
         <div className="w-full flex pb-3">
           <div className="w-[50%]">
-            <label className="block pb-2">Address1</label>
+            <label className="block pb-2">Address 1</label>
             <input
               type="address"
               required
@@ -112,7 +112,7 @@ const ShippingInfo = () => {
             />
           </div>
           <div className="w-[50%]">
-            <label className="block pb-2">Address2</label>
+            <label className="block pb-2">Address 2</label>
             <input type="address" required className={`${styles.input}`} />
           </div>
         </div>
@@ -128,7 +128,7 @@ const CartData = () => {
     <div className="w-full bg-[#fff] rounded-md p-5 pb-8">
       <div className="flex justify-between">
         <h3 className="text-[16px] font-[400] text-[#000000a4]">subtotal:</h3>
-        <h5 className="text-[18px] font-[600]">$2610.00</h5>
+        <h5 className="text-[18px] font-[600]">0.00</h5>
       </div>
       <br />
       <div className="flex justify-between">
@@ -140,9 +140,9 @@ const CartData = () => {
         <h3 className="text-[16px] font-[400] text-[#000000a4]">Discount:</h3>
         <h5 className="text-[18px] font-[600]">-</h5>
       </div>
-      <h5 className="text-[18px] font-[600] text-end pt-3">$2610.00</h5>
+      <h5 className="text-[18px] font-[600] text-end pt-3">0.00</h5>
       <br />
-      <form>
+      {/* <form>
         <input
           type="text"
           className={`${styles.input} h-[40px] pl-2`}
@@ -155,7 +155,7 @@ const CartData = () => {
           value="Apply code"
           type="submit"
         />
-      </form>
+      </form> */}
     </div>
   );
 };
