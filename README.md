@@ -22,12 +22,14 @@ Since this project will hold both the client application and the server applicat
 
 - #### `src`
 
-  - `assets` - This folder holds assets such as images, docs, and fonts
+  - `assets` - This folder holds assets such as images.
 
-  - `components` - This folder holds all of the different components that will make up our views
-  - `views` - These represent a unique page on the website i.e. Home or About. These are still normal react components
-  - `App.js` - This is what renders all of our browser routes and different views
-  - `index.js` - This is what renders the react app by rendering App.js, should not change
+  - `components` - This folder holds all of the different components that will make up our pages.
+  - `pages` - These represent a unique page on the website e.g. Home or About.
+  - `App.js` - Renders all of our browser routes and different pages.
+  - `routes` - Holds the application routes.
+  - `redux` - Holds reducers, actions and the store.
+  - `styles` - Defines styles for buttons, headers etc
 
 ### `backend` - Holds the server application
 
