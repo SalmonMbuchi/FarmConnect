@@ -2,16 +2,17 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/Layout/Header";
 import ProductCard from "../components/Route/ProductCard/ProductCard";
 import styles from "../styles/styles";
-import { productData } from "../static/data";
+// import { productData } from "../static/data";
+import { useSelector } from "react-redux";
 
 const BestSellingPage = () => {
   const [data, setData] = useState([]);
+  const { allProducts } = useSelector((state) => state.product);
 
   useEffect(() => {
-    const d =
-      productData && productData.sort((a, b) => b.sold_out - a.sold_out);
+    const d = allProducts;
     setData(d);
-  }, []);
+  }, [allProducts]);
 
   return (
     <>

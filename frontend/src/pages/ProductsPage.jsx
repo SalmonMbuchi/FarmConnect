@@ -4,21 +4,21 @@ import Footer from "../components/Layout/Footer";
 import Header from "../components/Layout/Header";
 import ProductCard from "../components/Route/ProductCard/ProductCard";
 import styles from "../styles/styles";
-import { productData } from "../static/data";
+import { useSelector } from "react-redux";
 
 const ProductsPage = () => {
   const [searchParams] = useSearchParams();
   const categoryData = searchParams.get("category");
+  const { allProducts } = useSelector((state) => state.product);
   const [data, setData] = useState([]);
 
   useEffect(() => {
     if (categoryData === null) {
-      const d =
-        productData && productData.sort((a, b) => a.total_sell - b.total_sell);
+      const d = allProducts;
       setData(d);
     } else {
       const d =
-        productData && productData.filter((i) => i.category === categoryData);
+        allProducts && allProducts.filter((i) => i.category === categoryData);
       setData(d);
     }
   }, []);

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "../../styles/styles";
-import { categoriesData, productData } from "../../static/data";
+import { categoriesData } from "../../static/data";
 import {
   AiOutlineHeart,
   AiOutlineSearch,
@@ -16,6 +16,9 @@ import { useSelector } from "react-redux";
 import { backend_url } from "../../server";
 import Cart from "../Cart/Cart";
 import Wishlist from "../Wishlist/Wishlist";
+// Debugging
+import { getAllProducts } from "../../redux/actions/product";
+import { useDispatch } from "react-redux";
 
 const Header = ({ activeHeading }) => {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -25,15 +28,22 @@ const Header = ({ activeHeading }) => {
   const [active, setActive] = useState(false);
   const [openCart, setOpenCart] = useState(false);
   const [openWishlist, setOpenWishlist] = useState(false);
-  // const [open, setOpen] = useState(false);
+  const { allProducts } = useSelector((state) => state.product);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getAllProducts());
+  }, [dispatch]);
+  // console.log(allProducts);
 
   const handleSearchChange = (e) => {
     const term = e.target.value;
     setSearchTerm(term);
 
     const filteredProducts =
-      productData &&
-      productData.filter((product) =>
+      allProducts &&
+      allProducts.filter((product) =>
         product.name.toLowerCase().includes(term.toLowerCase())
       );
     setSearchData(filteredProducts);
@@ -87,7 +97,7 @@ const Header = ({ activeHeading }) => {
                       <Link to={`/product/${Product_name}`}>
                         <div className="w-full flex items-start-py-3">
                           <img
-                            src={i.image_Url[0].url}
+                            src={`${backend_url}${i.images[0]}`}
                             alt=""
                             className="w-[40px] h-[40px] mr-[10px]"
                           />
@@ -101,7 +111,7 @@ const Header = ({ activeHeading }) => {
           </div>
 
           <div className={`${styles.button}`}>
-            <Link to="/seller">
+            <Link to="/create-shop">
               <h1 className="text-[#fff] flex items-center">
                 Become Seller <IoIosArrowForward className="ml-1" />
               </h1>

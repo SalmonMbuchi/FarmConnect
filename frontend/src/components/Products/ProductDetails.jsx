@@ -7,7 +7,7 @@ import {
 } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-// import { getAllProductsShop } from "../../redux/actions/product";
+import { getAllProductsShop } from "../../redux/actions/product";
 import { backend_url } from "../../server";
 import styles from "../../styles/styles";
 
@@ -17,10 +17,10 @@ const ProductDetails = ({ data }) => {
   const [select, setSelect] = useState(0);
   const navigate = useNavigate();
 
-  // const { products } = useSelector((state) => state.products);
+  const { products } = useSelector((state) => state.product);
   const dispatch = useDispatch();
   useEffect(() => {
-    // dispatch(getAllProductsShop(data && data.shop._id));
+    dispatch(getAllProductsShop(data && data.shop._id));
   }, [dispatch, data]);
 
   const incrementCount = () => {
@@ -45,52 +45,49 @@ const ProductDetails = ({ data }) => {
             <div className="block w-full 800px:flex">
               <div className="w-full 800px:w-[50%]">
                 <img
-                  // src={`${backend_url}${data && data.images[select]}`}
-                  src={data.image_Url[select].url}
+                  src={`${backend_url}${data && data.images[select]}`}
+                  // src={data.image_Url[select].url}
                   alt=""
                   className="w-[80%]"
                 />
                 <div className="w-full flex">
-                  {/* {data &&
-                    data.images.map((i, index) => ( */}
-                  <div
-                    className={`${
-                      select === 0 ? "border" : "null"
-                    } cursor-pointer`}
-                  >
-                    <img
-                      // src={`${backend_url}${i}`}
-                      src={data?.image_Url[0].url}
-                      alt=""
-                      className="h-[200px] overflow-hidden mr-3 mt-3"
-                      onClick={() => setSelect(0)}
-                    />
-                  </div>
-                  {/* ))} */}
+                  {data &&
+                    data.images.map((i, index) => (
+                      <div
+                        className={`${
+                          select === 0 ? "border" : "null"
+                        } cursor-pointer`}
+                      >
+                        <img
+                          src={`${backend_url}${i}`}
+                          // src={data?.image_Url[0].url}
+                          alt=""
+                          className="h-[200px] overflow-hidden mr-3 mt-3"
+                          onClick={() => setSelect(index)}
+                        />
+                      </div>
+                    ))}
                   <div
                     className={`${
                       select === 1 ? "border" : "null"
                     } cursor-pointer`}
                   >
-                    <img
-                      // src={`${backend_url}${i}`}
-                      src={data?.image_Url[1].url}
+                    {/* <img
+                      src={`${backend_url}${i}`}
                       alt=""
                       className="h-[200px] overflow-hidden mr-3 mt-3"
                       onClick={() => setSelect(1)}
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>
-              <div className="w-full 800px:w-[50%] pt-5">
+              <div className="w-full 800px:w-[50%] pt-5 ml-5">
                 <h1 className={`${styles.productTitle}`}>{data.name}</h1>
                 <p>{data.description}</p>
                 <div className="flex pt-3">
-                  <h4 className={`${styles.productDiscountPrice}`}>
-                    {data.discount_price} Ksh
-                  </h4>
-                  <h3 className={`${styles.price}`}>
-                    {data.price ? data.price + "Ksh" : null}
+                  <h3 className={`${styles.productDiscountPrice}`}>
+                    {/* {data.originalPrice ? data.originalPrice + "Ksh" : null} */}
+                    ksh {data.originalPrice}
                   </h3>
                 </div>
 
@@ -141,8 +138,8 @@ const ProductDetails = ({ data }) => {
                 </div>
                 <div className="flex items-center pt-8">
                   <img
-                    // src={`${backend_url}${data?.shop?.avatar}`}
-                    src={data.shop.shop_avatar.url}
+                    src={`${backend_url}${data?.shop?.avatar}`}
+                    // src={data.shop.shop_avatar.url}
                     alt=""
                     className="w-[50px] h-[50px] rounded-full ml-4 mr-4"
                   />
@@ -241,7 +238,7 @@ const ProductDetailsInfo = ({ data, products }) => {
             <Link to={`/shop/preview/${data.shop._id}`}>
               <div className="flex items-center">
                 <img
-                  src={data.shop.shop_avatar.url}
+                  src={`${backend_url}${data?.shop?.avatar}`}
                   className="w-[50px] h-[50px] rounded-full"
                   alt=""
                 />
