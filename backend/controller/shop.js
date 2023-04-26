@@ -4,13 +4,12 @@ const router = express.Router();
 const fs = require("fs");
 const jwt = require("jsonwebtoken");
 const sendMail = require("../utils/sendMail");
-const sendToken = require("../utils/jwtToken");
 const Shop = require("../model/shop");
-const { isAuthenticated, isSeller } = require("../middleware/auth");
+const { isSeller } = require("../middleware/auth");
 const { upload } = require("../multer");
 const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const ErrorHandler = require("../utils/ErrorHandler");
-const sendShopToken = require("../utils/shopToken.jsx");
+const sendShopToken = require("../utils/shopToken");
 
 // create shop
 router.post("/create-shop", upload.single("file"), async (req, res, next) => {

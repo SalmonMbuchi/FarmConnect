@@ -37,7 +37,7 @@ router.post(
   })
 );
 
-// get all products of a shop
+// get all products of a shop specified by the id
 router.get(
   "/get-all-products-shop/:id",
   catchAsyncErrors(async (req, res, next) => {

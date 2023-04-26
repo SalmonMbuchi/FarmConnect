@@ -11,6 +11,7 @@ const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const sendToken = require("../utils/jwtToken");
 const { isAuthenticated } = require("../middleware/auth");
 
+// Create a user
 router.post("/create-user", upload.single("file"), async (req, res, next) => {
   try {
     const { name, email, password } = req.body;
@@ -60,6 +61,7 @@ router.post("/create-user", upload.single("file"), async (req, res, next) => {
   }
 });
 
+// Generate activation token
 const createActivationToken = (user) => {
   return jwt.sign(user, process.env.ACTIVATION_SECRET, {
     expiresIn: "5m",
@@ -94,7 +96,6 @@ router.post(
       });
       sendToken(user, 201, res);
     } catch (err) {
-      // handle this
       return next(new ErrorHandler(err.message, 500));
     }
   })
