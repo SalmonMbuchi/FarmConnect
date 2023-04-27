@@ -29,7 +29,7 @@ Since this project will hold both the client application and the server applicat
   - `App.js` - Renders all of our browser routes and different pages.
   - `routes` - Holds the application routes.
   - `redux` - Holds reducers, actions and the store.
-  - `styles` - Defines styles for buttons, headers etc
+  - `styles` - Global stylesheet
 
 ### `backend` - Holds the server application
 

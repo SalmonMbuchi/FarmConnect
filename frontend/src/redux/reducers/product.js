@@ -5,6 +5,7 @@ const initialState = {
 };
 
 export const productReducer = createReducer(initialState, {
+  // reducer functions corresponding to an action type
   productCreateRequest: (state) => {
     state.isLoading = true;
   },
